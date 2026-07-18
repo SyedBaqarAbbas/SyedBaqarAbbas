@@ -45,6 +45,11 @@ A browser-based neuroevolution simulation where fish evolve neural-network survi
 - [ImageTranslator](https://github.com/SyedBaqarAbbas/ImageTranslator) — raw manga in, translated pages out.
 - [IndexInvestmentPlanner](https://github.com/SyedBaqarAbbas/IndexInvestmentPlanner) — a KSE-100 replication and rebalancing calculator.
 
+## tools I reach for
+
+**Core:** Python · SQL<br>
+**Build:** Data engineering · Machine learning · AI agents & automation
+
 <!--
 Proof of life is intentionally hidden for now because GitHub already shows a contribution graph below the profile README.
 
