@@ -1,0 +1,10 @@
+{
+  "name": "syedbaqarabbas-profile",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate:activity": "node scripts/generate-activity.mjs",
+    "generate:hero": "node scripts/generate-hero.mjs",
+    "test": "node --test"
+  }
+}

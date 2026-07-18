@@ -1,0 +1,82 @@
+name: Refresh profile visuals
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/update-profile.yml"
+      - "package.json"
+      - "scripts/generate-activity.mjs"
+      - "scripts/generate-hero.mjs"
+      - "assets/templates/**"
+      - "tests/**"
+  schedule:
+    - cron: "17 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-visuals
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out the profile repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Test the renderer
+        run: npm test
+
+      - name: Generate light and dark activity cards
+        run: node scripts/generate-activity.mjs --username "${{ github.repository_owner }}" --output dist
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Generate the recent-repositories header
+        run: node scripts/generate-hero.mjs --username "${{ github.repository_owner }}" --output dist
+
+      - name: Publish the last successful render
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          activity_dir="$RUNNER_TEMP/profile-activity"
+
+          if git ls-remote --exit-code --heads origin generated >/dev/null 2>&1; then
+            git fetch --no-tags origin generated
+            git worktree add --detach "$activity_dir" FETCH_HEAD
+          else
+            git worktree add --detach "$activity_dir"
+            git -C "$activity_dir" switch --orphan generated
+          fi
+
+          cp dist/activity-dark.svg "$activity_dir/activity-dark.svg"
+          cp dist/activity-light.svg "$activity_dir/activity-light.svg"
+          cp dist/hero-dark.svg "$activity_dir/hero-dark.svg"
+          cp dist/hero-light.svg "$activity_dir/hero-light.svg"
+          touch "$activity_dir/.nojekyll"
+
+          git -C "$activity_dir" add activity-dark.svg activity-light.svg hero-dark.svg hero-light.svg .nojekyll
+
+          if git -C "$activity_dir" diff --cached --quiet; then
+            echo "Activity cards are already current."
+            exit 0
+          fi
+
+          git -C "$activity_dir" commit -m "chore: refresh profile activity"
+          git -C "$activity_dir" push origin HEAD:generated

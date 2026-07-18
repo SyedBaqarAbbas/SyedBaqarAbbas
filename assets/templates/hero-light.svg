@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
+  <title id="title">Finding ways to spend my weekends</title>
+  <desc id="desc">A light data-console scene with project folders and a slowly moving network constellation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#eef5f9"/>
+    </linearGradient>
+    <radialGradient id="coralGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(210 160) rotate(25) scale(430 260)">
+      <stop stop-color="#ff7a4d" stop-opacity=".13"/>
+      <stop offset="1" stop-color="#ff7a4d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cyanGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1010 245) rotate(130) scale(410 260)">
+      <stop stop-color="#28a7d8" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#28a7d8" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#4d6278" stroke-opacity=".07"/>
+    </pattern>
+    <clipPath id="panelClip"><rect x="2" y="2" width="1196" height="376" rx="24"/></clipPath>
+  </defs>
+  <style>
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+    .sans{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    .flow{stroke-dasharray:8 12;animation:flow 9s linear infinite}
+    .pulse{transform-box:fill-box;transform-origin:center;animation:pulse 3.8s ease-in-out infinite}
+    .pulse-b{animation-delay:-1.25s}.pulse-c{animation-delay:-2.4s}
+    .caret{animation:blink 1.1s steps(1,end) infinite}
+    .scan{animation:scan 9s ease-in-out infinite}
+    @keyframes flow{to{stroke-dashoffset:-120}}
+    @keyframes pulse{0%,100%{opacity:.45;transform:scale(.92)}50%{opacity:1;transform:scale(1.16)}}
+    @keyframes blink{0%,45%{opacity:1}46%,100%{opacity:.15}}
+    @keyframes scan{0%,12%{transform:translateX(-120px);opacity:0}25%,70%{opacity:.18}88%,100%{transform:translateX(1180px);opacity:0}}
+    @media (prefers-reduced-motion:reduce){.flow,.pulse,.caret,.scan{animation:none}.pulse,.caret{opacity:.8}.scan{display:none}}
+  </style>
+  <g clip-path="url(#panelClip)">
+    <rect x="2" y="2" width="1196" height="376" rx="24" fill="url(#bg)"/>
+    <rect x="2" y="2" width="1196" height="376" rx="24" fill="url(#coralGlow)"/>
+    <rect x="2" y="2" width="1196" height="376" rx="24" fill="url(#cyanGlow)"/>
+    <rect x="2" y="2" width="1196" height="376" rx="24" fill="url(#grid)"/>
+    <rect class="scan" x="-140" y="0" width="110" height="380" fill="#28a7d8" opacity="0"/>
+  </g>
+  <rect x="2" y="2" width="1196" height="376" rx="24" fill="none" stroke="#cbd7e3" stroke-width="2"/>
+
+  <circle cx="35" cy="32" r="5" fill="#ff6f47"/>
+  <text x="50" y="38" class="mono" font-size="14" letter-spacing="1.8" fill="#526072">BAQAR://WEEKEND-CONSOLE</text>
+  <circle cx="1047" cy="32" r="4" fill="#159bc9" class="pulse"/>
+  <text x="1060" y="38" class="mono" font-size="13" fill="#526072">STILL CURIOUS</text>
+
+  <text x="60" y="122" class="sans" font-size="54" font-weight="760" fill="#10141d">Finding ways to</text>
+  <text x="60" y="181" class="sans" font-size="54" font-weight="760" fill="#ed5d35">spend my weekends</text>
+  <text x="60" y="221" class="mono" font-size="16" fill="#526072">data · agents · simulations · ideas that escaped the notes app</text>
+
+  <rect x="60" y="244" width="456" height="102" rx="14" fill="#ffffff" stroke="#cbd7e3"/>
+  <text x="81" y="270" class="mono" font-size="13" fill="#087fa8">baqar@weekend:~$</text>
+  <text x="238" y="270" class="mono" font-size="13" fill="#10141d">ls recent_repos</text>
+  <text x="81" y="298" class="mono" font-size="13" fill="#526072">{{RECENT_REPO_1}}/</text>
+  <text x="81" y="326" class="mono" font-size="13" fill="#526072">{{RECENT_REPO_2}}/</text>
+  <rect x="444" y="314" width="8" height="15" rx="1" fill="#ed5d35" class="caret"/>
+
+  <g fill="none" stroke="#159bc9" stroke-opacity=".38" stroke-width="1.5">
+    <path class="flow" d="M694 104L808 72 900 124 1010 92 1112 145"/>
+    <path class="flow" d="M694 104L758 190 880 181 973 244 1092 224"/>
+    <path class="flow" d="M808 72L880 181 1010 92 973 244 1112 145"/>
+    <path class="flow" d="M758 190L812 286 973 244 1092 224 1044 314"/>
+    <path class="flow" d="M880 181L812 286 932 325 1044 314"/>
+  </g>
+  <g fill="#f8fafc" stroke="#159bc9" stroke-width="2">
+    <circle cx="694" cy="104" r="8"/><circle cx="808" cy="72" r="7"/>
+    <circle cx="900" cy="124" r="10" class="pulse"/><circle cx="1010" cy="92" r="7"/>
+    <circle cx="1112" cy="145" r="9" class="pulse pulse-b"/><circle cx="758" cy="190" r="7"/>
+    <circle cx="880" cy="181" r="8"/><circle cx="973" cy="244" r="10" class="pulse pulse-c"/>
+    <circle cx="1092" cy="224" r="7"/><circle cx="812" cy="286" r="8"/>
+    <circle cx="932" cy="325" r="7"/><circle cx="1044" cy="314" r="9"/>
+  </g>
+  <g class="mono" font-size="12" fill="#526072">
+    <text x="662" y="84">notes</text><text x="826" y="63">data</text>
+    <text x="912" y="117">agents</text><text x="1018" y="83">graphs</text>
+    <text x="1060" y="171">simulations</text><text x="986" y="267">why not?</text>
+  </g>
+</svg>

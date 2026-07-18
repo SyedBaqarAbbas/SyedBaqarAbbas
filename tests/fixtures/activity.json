@@ -1,0 +1,40 @@
+{
+  "releaseCount": 1,
+  "data": {
+    "user": {
+      "contributionsCollection": {
+        "totalCommitContributions": 12,
+        "totalPullRequestContributions": 4,
+        "totalPullRequestReviewContributions": 2,
+        "restrictedContributionsCount": 1,
+        "contributionCalendar": {
+          "totalContributions": 19,
+          "weeks": [
+            {
+              "contributionDays": [
+                { "date": "2026-06-28", "contributionCount": 0, "contributionLevel": "NONE", "weekday": 0 },
+                { "date": "2026-06-29", "contributionCount": 1, "contributionLevel": "FIRST_QUARTILE", "weekday": 1 },
+                { "date": "2026-06-30", "contributionCount": 3, "contributionLevel": "SECOND_QUARTILE", "weekday": 2 },
+                { "date": "2026-07-01", "contributionCount": 6, "contributionLevel": "THIRD_QUARTILE", "weekday": 3 },
+                { "date": "2026-07-02", "contributionCount": 11, "contributionLevel": "FOURTH_QUARTILE", "weekday": 4 },
+                { "date": "2026-07-03", "contributionCount": 0, "contributionLevel": "NONE", "weekday": 5 },
+                { "date": "2026-07-04", "contributionCount": 0, "contributionLevel": "NONE", "weekday": 6 }
+              ]
+            },
+            {
+              "contributionDays": [
+                { "date": "2026-07-05", "contributionCount": 2, "contributionLevel": "FIRST_QUARTILE", "weekday": 0 },
+                { "date": "2026-07-06", "contributionCount": 0, "contributionLevel": "NONE", "weekday": 1 },
+                { "date": "2026-07-07", "contributionCount": 4, "contributionLevel": "SECOND_QUARTILE", "weekday": 2 },
+                { "date": "2026-07-08", "contributionCount": 0, "contributionLevel": "NONE", "weekday": 3 },
+                { "date": "2026-07-09", "contributionCount": 8, "contributionLevel": "THIRD_QUARTILE", "weekday": 4 },
+                { "date": "2026-07-10", "contributionCount": 0, "contributionLevel": "NONE", "weekday": 5 },
+                { "date": "2026-07-11", "contributionCount": 1, "contributionLevel": "FIRST_QUARTILE", "weekday": 6 }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
