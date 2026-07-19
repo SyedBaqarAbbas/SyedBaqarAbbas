@@ -20,6 +20,10 @@
 
 ## currently losing weekends to
 
+<details>
+  <summary>show the projects</summary>
+  <br>
+
 ### [touch traversal](https://github.com/SyedBaqarAbbas/touch-traversal)
 
 A local-first knowledge graph that turns Markdown notes into a 3D constellation you can explore with a mouse, keyboard, or hand gestures.
@@ -44,6 +48,8 @@ A browser-based neuroevolution simulation where fish evolve neural-network survi
 
 - [ImageTranslator](https://github.com/SyedBaqarAbbas/ImageTranslator) — raw manga in, translated pages out.
 - [IndexInvestmentPlanner](https://github.com/SyedBaqarAbbas/IndexInvestmentPlanner) — a KSE-100 replication and rebalancing calculator.
+
+</details>
 
 ## tools I reach for
 
