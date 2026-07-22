@@ -54,8 +54,8 @@
   <rect x="60" y="244" width="456" height="102" rx="14" fill="#111a27" stroke="#364255"/>
   <text x="81" y="270" class="mono" font-size="13" fill="#54c7ff">baqar@weekend:~$</text>
   <text x="238" y="270" class="mono" font-size="13" fill="#f8fafc">ls recent_repos</text>
-  <text x="81" y="298" class="mono" font-size="13" fill="#b9c3d5">touch-traversal/</text>
-  <text x="81" y="326" class="mono" font-size="13" fill="#b9c3d5">ImageTranslator/</text>
+  <text x="81" y="298" class="mono" font-size="13" fill="#b9c3d5">ImageTranslator/</text>
+  <text x="81" y="326" class="mono" font-size="13" fill="#b9c3d5">touch-traversal/</text>
   <rect x="444" y="314" width="8" height="15" rx="1" fill="#ff7a4d" class="caret"/>
 
   <g fill="none" stroke="#54c7ff" stroke-opacity=".34" stroke-width="1.5">
